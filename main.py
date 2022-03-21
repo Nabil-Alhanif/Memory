@@ -5,6 +5,7 @@ from bot import CustomBot
 from cogs.greetings import Greetings
 from cogs.scraper import Scraper
 from cogs.wikipedia import Wikipedia
+from cogs.words import Words
 from cogs.commandErrHandler import CommandErrHandler
 
 from module.activate import keep_alive
@@ -26,6 +27,7 @@ def main():
     bot.add_cog(Greetings(bot))
     bot.add_cog(Scraper(bot))
     bot.add_cog(Wikipedia(bot))
+    bot.add_cog(Words(bot))
     bot.add_cog(CommandErrHandler(bot))
 
     bot.run(TOKEN)
