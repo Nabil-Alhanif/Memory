@@ -9,7 +9,6 @@ class CustomBot(commands.Bot):
 
     async def on_message(self, message):
         reactivate = (message.content == '$reactivate')
-        reactivate |= (self.user.mentioned_in(message))
         if reactivate:
             await message.channel.send('Reactivating...')
             keep_alive()
